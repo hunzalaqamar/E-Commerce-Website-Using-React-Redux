@@ -1,0 +1,10 @@
+.cart-img{
+    width: 4rem;
+    font-size: 2rem;
+    color: black;
+    position: fixed;
+    margin-top: 6rem;
+    right: 1px;
+    top: 1px;
+    z-index:20;
+  }

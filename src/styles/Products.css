@@ -1,0 +1,6 @@
+.ProductBgImg {
+  background-image: url("../assets/ecomm-bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
