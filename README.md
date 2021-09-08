@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
 first do npm install
-then do npm run and do make login and signup functional just type npm run jsonserver the code will take care of the files and ports
+then do npm start and do make login and signup functional just type npm run jsonserver the code will take care of the files and ports
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
