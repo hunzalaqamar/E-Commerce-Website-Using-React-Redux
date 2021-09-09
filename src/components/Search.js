@@ -9,17 +9,18 @@ function Search() {
   const products = useSelector((state) => state.allProducts.products);
 
   const filter = () => {
+    const searchedProducts = [];
     products.map((prod) => {
       if (value !== "") {
         if (prod.title.toLowerCase().includes(value.toLowerCase())) {
           if (prod.title !== "") {
-            dispatch(filteredProducts(prod));
-            console.log(prod);
+            searchedProducts.push(prod)
           }
         }
       }
       return null;
     });
+    dispatch(filteredProducts(searchedProducts));
   };
 
   return (

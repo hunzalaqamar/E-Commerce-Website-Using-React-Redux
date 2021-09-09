@@ -22,10 +22,10 @@ function ProductCard() {
         <Container style={{ marginTop: "20%" }} key={id}>
           <Card
             className="text-center bg-dark text-white"
-            style={{ width: "21rem" }}
+            style={{ width: "18rem" }}
           >
             <Link to={`/product/${id}`}>
-              <Card.Img variant="top" src={image} />
+              <Card.Img  variant="top" src={image} />
             </Link>
             <Card.Body>
               <Card.Title>{title}</Card.Title>
