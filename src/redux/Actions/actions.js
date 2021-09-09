@@ -7,12 +7,9 @@ export const setProducts = (products) => {
   };
 };
 
-export const filteredProducts = (product, productId) => {
+export const filteredProducts = (product) => {
   return {
     type: ActionTypes.FILTERED_PRODUCTS,
-    payload:[
-      productId,
-      product
-    ]
+    payload:product
   };
 };

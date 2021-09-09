@@ -148,7 +148,7 @@ function Signup() {
                 <ButtonComp
                   Variant={"primary"}
                   Type={"submit"}
-                  Text={"Sign me Up!"}
+                  Text={"Sign me up"}
                   loginHandler={formik.handleSubmit}
                 />{" "}
                 <Link to="/" className="btn btn-primary">

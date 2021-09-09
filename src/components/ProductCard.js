@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card, Button, Container, Row, Col } from "react-bootstrap";
+import { Card, Button, Container, Row } from "react-bootstrap";
 import "../styles/Products.css";
 import Header from "./Header";
 import siteLogo from "../assets/ecomm-logo.png";
@@ -10,14 +10,12 @@ import { Product } from "./Product";
 
 function ProductCard() {
   const products = useSelector((state) => state.allProducts.products);
-  const filter = useSelector((state) => state.allProducts.filtered)
-  console.log(products)
-  console.log(filter)
+  const filter = useSelector((state) => state.allProducts.filtered);
   const dispatch = useDispatch();
   Product();
+  console.log(filter)
 
-  if(filter.length < 1)
-  {
+  if (filter.length < 1) {
     const renderList = products.map((product) => {
       const { id, title, image, price, category, description } = product;
       return (
@@ -49,7 +47,7 @@ function ProductCard() {
         </Container>
       );
     });
-  
+
     return (
       <div className="ProductBgImg">
         <Header logo={siteLogo} />
@@ -58,8 +56,7 @@ function ProductCard() {
         </Row>
       </div>
     );
-  }
-  else{
+  } else {
     const renderList = filter.map((fproduct) => {
       const { id, title, image, price, category, description } = fproduct;
       return (
@@ -91,7 +88,7 @@ function ProductCard() {
         </Container>
       );
     });
-  
+
     return (
       <div className="ProductBgImg">
         <Header logo={siteLogo} />
@@ -101,7 +98,6 @@ function ProductCard() {
       </div>
     );
   }
-  
 }
 
 export default ProductCard;

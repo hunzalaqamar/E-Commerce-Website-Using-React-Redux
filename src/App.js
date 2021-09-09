@@ -3,7 +3,6 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 import Checkout from './components/Checkout'
 import {Route, Switch} from 'react-router-dom'
-import Product from './components/Product';
 import ProtectedRoute from "./components/ProtectedRoute"
 import ProductCard from './components/ProductCard';
 

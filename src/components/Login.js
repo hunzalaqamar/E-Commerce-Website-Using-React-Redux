@@ -6,7 +6,6 @@ import { Link, useHistory } from "react-router-dom";
 import Button from "./ButtonComp";
 import InputField from "./InputField";
 import "../styles/LoginBackgroundImage.css";
-import Authentication from "./Authentication";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
@@ -40,8 +39,10 @@ function Login() {
         })
         .then((response) => {
           if (response.data.length > 0) {
-            Authentication.handleAuthentication(true);
-            history.push("/product");
+            localStorage.setItem("auth", "true");
+            if (localStorage.getItem("auth") === "true") {
+              history.push("/product");
+            }
           } else {
             alert("Invalid Email or Password");
             history.push("/");

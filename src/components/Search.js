@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { filteredProducts } from "../redux/Actions/actions";
 
 function Search() {
-  let flag = false;
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
   const products = useSelector((state) => state.allProducts.products);
@@ -14,20 +13,16 @@ function Search() {
       if (value !== "") {
         if (prod.title.toLowerCase().includes(value.toLowerCase())) {
           if (prod.title !== "") {
-            flag = true;
-            dispatch(filteredProducts(prod, prod.id));
+            dispatch(filteredProducts(prod));
             console.log(prod);
           }
         }
       }
-      if (flag === false) {
-        dispatch(filteredProducts("", ""));
-      }
+      return null;
     });
   };
 
   return (
-    <div>
       <Form>
         <Form.Group className="mb-2" controlId="search">
           <Form.Control
@@ -40,13 +35,12 @@ function Search() {
           />
         </Form.Group>
         <i
-          class="fas fa-search"
+          className="fas fa-search"
           onClick={() => {
             filter();
           }}
         ></i>
       </Form>
-    </div>
   );
 }
 

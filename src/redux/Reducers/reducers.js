@@ -10,7 +10,7 @@ export const productsReducer = (state = intialState, { type, payload }) => {
       return { ...state, products: payload };
 
     case ActionTypes.FILTERED_PRODUCTS:
-      return { ...state, filtered: payload };
+      return { ...state, filtered: state.filtered.concat(payload)};
 
     default:
       return state;

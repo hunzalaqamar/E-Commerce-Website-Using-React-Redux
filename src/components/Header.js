@@ -1,11 +1,19 @@
 import React from "react";
 import { Navbar, Badge, Nav, Row } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "../styles/Header.css";
 import Search from "./Search";
 
 function Header({ logo, productName }) {
+
+  const history = useHistory();
+
+  const signOut = () =>{
+    localStorage.clear()
+    history.push("/")
+  }
+
   const units = useSelector((state) => state.basket.numberOfUnits);
   return (
     <Row md={1} lg={1}>
@@ -42,12 +50,10 @@ function Header({ logo, productName }) {
             </NavLink>
           </Nav>
           <Nav className="me-auto">
-            <NavLink to="/">
-              <i class="fa fa-sign-out" style={{ color: "darkcyan" }}>
+              <i className="fa fa-sign-out" onClick={()=>signOut()} style={{ color: "darkcyan" }}>
                 {" "}
                 Signout
               </i>
-            </NavLink>
           </Nav>
         </Navbar>
     </Row>

@@ -11,7 +11,6 @@ function CheckoutItem({ products }) {
   };
 
   return (
-    <>
       <ListGroup.Item className="listItems">
         <p>
           {products.title} - ${products.price}
@@ -23,7 +22,6 @@ function CheckoutItem({ products }) {
           Remove
         </Button>
       </ListGroup.Item>
-    </>
   );
 }
 

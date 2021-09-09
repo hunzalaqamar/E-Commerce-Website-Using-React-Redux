@@ -7,6 +7,7 @@ import CheckoutItem from "../components/CheckOutItem";
 import Header from "./Header";
 import siteLogo from "../assets/ecomm-logo.png";
 import "../styles/Products.css";
+import BackButton from "./BackButton";
 
 
 function Checkout() {
@@ -41,9 +42,12 @@ function Checkout() {
                 </ListGroup>
               )}
             </Card.Body>
+            <BackButton/>
+
           </Card>
         </Col>
       </Row>
+      
     </Container>
     </div>
   );
