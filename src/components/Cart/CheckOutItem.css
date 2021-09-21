@@ -1,0 +1,5 @@
+.listItems{
+    display: "flex";
+    flex-wrap: "wrap";
+    justify-Content: "space-between";
+}

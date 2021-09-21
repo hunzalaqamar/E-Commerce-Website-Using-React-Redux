@@ -1,0 +1,12 @@
+.bgcolor {
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+.containerAdjustment {
+  height: 100vh;
+}
+
+@media (max-width: 610px) {
+  .loginSideImg {
+    display: none;
+  }
+}

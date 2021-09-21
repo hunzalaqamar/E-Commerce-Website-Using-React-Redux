@@ -1,0 +1,31 @@
+body {
+  background: #e0e0e0;
+}
+
+.productCard {
+  width: fit-content;
+  min-height: 60vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+
+.productCardBtn {
+  border-radius: 1rem;
+}
+
+.productDescription {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.img-thumbnail {
+  border: none;
+  width: 100px;
+}

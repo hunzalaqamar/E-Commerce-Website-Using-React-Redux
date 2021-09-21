@@ -1,9 +1,30 @@
 {
   "users": [
     {
-      "id": "1",
-      "Email": "hunzala.qamar@gmail.com",
-      "Password": "dunkirk1"
+      "id": 71,
+      "emailAddress": "admin@admin.com",
+      "password": "admin"
+    },
+    {
+      "id": 73,
+      "fullName": "Ali",
+      "emailAddress": "Ali@gmail.com",
+      "phoneNo": "033311111",
+      "password": "@fishjack123"
+    },
+    {
+      "id": 59,
+      "fullName": "Kamran",
+      "emailAddress": "Kamran@gmail.com",
+      "phoneNo": "03222222222",
+      "password": "@fish$123"
+    },
+    {
+      "id": 78,
+      "fullName": "muhammad ahsan",
+      "emailAddress": "ahsan@gmail.com",
+      "phoneNo": "21321321322",
+      "password": "qwerty123"
     }
   ]
 }
